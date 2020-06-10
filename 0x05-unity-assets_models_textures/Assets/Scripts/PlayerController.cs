@@ -35,8 +35,14 @@ public class PlayerController : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
+
         moveDirection.y -= gravity * Time.deltaTime;
          // Move the controller
         player.Move(moveDirection * Time.deltaTime);
+
+        if ( transform.position.y < -10f)
+        {
+            transform.position = new Vector3(0f, 20f, 0f);
+        }
     }
 }
