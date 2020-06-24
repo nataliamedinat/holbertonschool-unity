@@ -1,10 +1,9 @@
-# Unity Projects :video_game: :video_game:
+# :video_game: Unity Projects
+In this repository you're gonna find unity projects from the AR/VR specialization.
 
-In this repository you´re gonna find unity projects from the AR/VR specialization.
+##  :computer: Installation
 
-## Installation
-
-Make sure abour your unity version and clone the repo :)
+Make sure about your unity version and clone the repo :)
 
 ## Author
 
