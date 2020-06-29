@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a819a1555c9ec8346b1012e1ee073558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationPoint: {x: 0, y: 0, z: 0}
   fallTime: 0.8
-  AllowRotation: 1
-  LimitRotation: 1
+  LoseText: {fileID: 5051468698422708883, guid: 021d252b5c00dad4cadab6c552455e36,
+    type: 3}
+  LoseBG: {fileID: 3225833281827172437, guid: 33428fa0389c87c479055ed6f744ce39, type: 3}
 --- !u!1 &1190551802421538413
 GameObject:
   m_ObjectHideFlags: 0
