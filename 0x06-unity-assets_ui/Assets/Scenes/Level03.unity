@@ -3983,6 +3983,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8812699400685988775, guid: f190f2c4df701a448806c5c4959ba60f,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c0be2b8373d6829428a748c5ee38bf48,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f190f2c4df701a448806c5c4959ba60f, type: 3}
 --- !u!1001 &5338625367730029485
