@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private int currentScene;
+
     public void LevelSelect(int level)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(level);
     }
 
     public void Options()
     {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("Last", currentScene);
         SceneManager.LoadScene("Options");
-    }
-
-    public void PreviousScene()
-    {
-        PlayerPrefs.SetString("Back", SceneManager.GetActiveScene().name);
     }
 
     public void ExitGame()

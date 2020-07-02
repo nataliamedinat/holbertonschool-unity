@@ -7,14 +7,8 @@ public class Timer : MonoBehaviour
 {
     public Text TimerText;
     private float startTime;
-   // private bool start = false;
-
-    //public void StartTime()
-    //{
-    //    start = true;
-    //}
-
-    // Start is called before the first frame update
+    public Text FinalTime;
+ 
     void Start()
     {
         startTime = Time.time;
@@ -31,6 +25,12 @@ public class Timer : MonoBehaviour
         string seconds = (t % 60).ToString("f2");
 
         TimerText.text = minutes + ":" + seconds;
+        Win();
         }
+    }
+
+    public void Win()
+    {
+        FinalTime.text = TimerText.text;
     }
 }

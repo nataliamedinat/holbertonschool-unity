@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
         float MoveX = Input.GetAxis("Horizontal");
         float MoveY = Input.GetAxis("Vertical");
 
-         if (player.isGrounded)
+        if (player.isGrounded)
         {
             moveDirection = new Vector3(MoveX, 0f, MoveY);
             moveDirection *= speed;
@@ -37,10 +38,10 @@ public class PlayerController : MonoBehaviour
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
-         // Move the controller
+        // Move the controller
         player.Move(moveDirection * Time.deltaTime);
 
-        if ( transform.position.y < -10f)
+        if (transform.position.y < -10f)
         {
             transform.position = new Vector3(0f, 20f, 0f);
         }
