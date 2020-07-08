@@ -12,8 +12,16 @@ public class CutsceneController : MonoBehaviour
     public void Transitions ()
     {
         mainCamera.SetActive(true);
-        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<PlayerController>().enabled = true;
         timer.SetActive(true);
         cutCam.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (transform.position == new Vector3(0f, 2.5f, -6.25f))
+        {
+            Transitions();
+        }
     }
 }

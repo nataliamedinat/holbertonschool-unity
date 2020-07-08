@@ -12,14 +12,13 @@ public class PlayerController : MonoBehaviour
     public float gravity = 20.0f;
     private Vector3 moveDirection = Vector3.zero;
     //Transform CameraT;
-    Animator animator;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<CharacterController>();
         //CameraT = Camera.main.transform;
-        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         float MoveX = Input.GetAxis("Horizontal");
         float MoveY = Input.GetAxis("Vertical");
+
 
         if (player.isGrounded)
         {
@@ -47,5 +47,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0f, 20f, 0f);
         }
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Jump");
+        }
+
     }
 }
