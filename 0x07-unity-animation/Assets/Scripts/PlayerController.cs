@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
+                animator.SetTrigger("Jump");
                 moveDirection.y = jumpSpeed;
             }
         }
@@ -57,10 +58,11 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsRunning", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+       /* if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Jump");
         }
+        */
 
     }
 }
