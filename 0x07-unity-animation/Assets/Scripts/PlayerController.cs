@@ -11,13 +11,15 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     private Vector3 moveDirection = Vector3.zero;
-    Transform CameraT;
+    //Transform CameraT;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<CharacterController>();
-        CameraT = Camera.main.transform;
+        //CameraT = Camera.main.transform;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
