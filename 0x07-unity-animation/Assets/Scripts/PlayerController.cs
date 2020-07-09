@@ -39,6 +39,10 @@ public class PlayerController : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
+        if (transform.position.y < -150.0)
+        {
+            animator.SetTrigger("IsFalling");
+        }
 
         moveDirection.y -= gravity * Time.deltaTime;
         // Move the controller
@@ -52,18 +56,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey("a") || Input.GetKey("w") || Input.GetKey("d") || Input.GetKey("s"))
         {
             animator.SetBool("IsRunning", true);
-            Debug.Log("Esta corriendo");
         }
         else
         {
             animator.SetBool("IsRunning", false);
         }
 
-       /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetTrigger("Jump");
-        }
-        */
+
+
 
     }
 }
