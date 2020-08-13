@@ -1,1 +1,0 @@
-Write a function that builds an AVL tree from an array
